@@ -1,0 +1,2769 @@
+@prefix : <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#> .
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://www.ontologydesignpatterns.org/cp/owl/componency.owl> ;
+                                                                           <http://purl.org/dc/elements/1.1/creator> "Michele Metta" ,
+                                                                                                                     "Pietro Sangermano" ;
+                                                                           <http://purl.org/dc/elements/1.1/date> "15/07/2022" ;
+                                                                           <http://purl.org/dc/elements/1.1/description> "Ontologia che cerca di rappresentare il dominio dell'apprendimento automatico con riferimenti non solo agli algoritmi specifici utilizzati in questo ambito ma anche a quelli che sono i tasks che possono essere risolti, i vari tipi di datasets e le diverse tipologie di features che possono essere utilizzate." ;
+                                                                           <http://purl.org/dc/elements/1.1/title> "Machine Learning" ;
+                                                                           :vann:preferredNamespacePrefix "ML" ;
+                                                                           :vann:preferredNamespaceUri "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/" ;
+                                                                           rdfs:label "Machine Learning ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://dbpedia.org/resource/Artificial_neural_network
+<http://dbpedia.org/resource/Artificial_neural_network> rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/resource/Cluster_analysis
+<http://dbpedia.org/resource/Cluster_analysis> rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/resource/Regression_analysis
+<http://dbpedia.org/resource/Regression_analysis> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#vann:preferredNamespacePrefix
+:vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#vann:preferredNamespaceUri
+:vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  https://www.wikidata.org/wiki/Classification
+<https://www.wikidata.org/wiki/Classification> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.wikidata.org/wiki/anomaly_detection
+<https://www.wikidata.org/wiki/anomaly_detection> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#distribuzione_probabilità
+:distribuzione_probabilità rdf:type rdfs:Datatype ;
+                           owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                             rdf:first "Target" ;
+                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                        rdf:first "Target e Features" ;
+                                                                        rdf:rest rdf:nil
+                                                                      ]
+                                                           ]
+                                               ] .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#funzioni_probabilistiche
+:funzioni_probabilistiche rdf:type rdfs:Datatype ;
+                          owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                owl:oneOf [ rdf:type rdf:List ;
+                                                            rdf:first "Conditional Likelihood" ;
+                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                       rdf:first "Gaussiana" ;
+                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                  rdf:first "Likelihood" ;
+                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                             rdf:first "Map" ;
+                                                                                             rdf:rest rdf:nil
+                                                                                           ]
+                                                                                ]
+                                                                     ]
+                                                          ]
+                                              ] .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#misure
+:misure rdf:type rdfs:Datatype ;
+        rdfs:comment "Tipi di distanza adottabili" ;
+        owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                              owl:oneOf [ rdf:type rdf:List ;
+                                          rdf:first "Euclidea" ;
+                                          rdf:rest [ rdf:type rdf:List ;
+                                                     rdf:first "Malhanobis" ;
+                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                rdf:first "Manhattan" ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                   ]
+                                        ]
+                            ] .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#addestrato_su
+:addestrato_su rdf:type owl:ObjectProperty ;
+               rdfs:domain :Algoritmo_ML ;
+               rdfs:range :Dataset ;
+               owl:propertyChainAxiom ( :utilizza
+                                        :è_estratta
+                                      ) ;
+               rdfs:comment "Se un certo algoritmo utilizza una certa feature e questa viene estratta da un certo dataset allora questo l'agoritmo è addestrato su quel dataset." ;
+               rdfs:label "addestrato_su" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#ha_weak_learner
+:ha_weak_learner rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> ;
+                 rdfs:domain :Ensamble_learning ;
+                 rdfs:range :Algoritmo_ML .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_input
+:prende_in_input rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Trasformatore_feature ;
+                 rdfs:range :Feature ;
+                 rdfs:comment "Un certo trasformatore feature prende in input un certo tipo di feature" ;
+                 rdfs:label "prende_in_input" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_inputB
+:prende_in_inputB rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :prende_in_input .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_inputC
+:prende_in_inputC rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :prende_in_input ;
+                  rdfs:domain :Trasformatore_feature_categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_inputQ
+:prende_in_inputQ rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :prende_in_input ;
+                  rdfs:domain :Trasformatore_feature_quantitativa ;
+                  rdfs:range :Quantitativa ;
+                  rdfs:comment "Questa è la relazione che permette di poter definire l'algoritmo di trasformazione feature che trasforma prende in input solo features quantitative e le trasforma solo in features quantitative." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#risolve
+:risolve rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :è_risolto_da ;
+         rdfs:domain :Algoritmo_ML ;
+         rdfs:range :Task ;
+         owl:propertyChainAxiom ( :addestrato_su
+                                  :è_utilizzato_per
+                                ) ;
+         rdfs:comment "Un algoritmo di ML risolve un certo task" ;
+         rdfs:label "risolve" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in
+:trasforma_in rdf:type owl:ObjectProperty ;
+              rdfs:domain :Trasformatore_feature ;
+              rdfs:range :Feature ;
+              rdfs:comment "un trasformatore feature trasforma una feature di un certo tipo in un altro tipo" ;
+              rdfs:label "trasforma_in" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_BQ
+:trasforma_in_BQ rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :trasforma_in ;
+                 rdfs:domain :Trasformatore_feature_booleana ;
+                 rdfs:range :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_CB
+:trasforma_in_CB rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :trasforma_in ;
+                 rdfs:domain :Trasformatore_feature_categorica ;
+                 rdfs:range :Booleana .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_CC
+:trasforma_in_CC rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :trasforma_in ;
+                 rdfs:domain :Trasformatore_feature_categorica ;
+                 rdfs:range :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_CQ
+:trasforma_in_CQ rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :trasforma_in ;
+                 rdfs:domain :Trasformatore_feature_categorica ;
+                 rdfs:range :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_QB
+:trasforma_in_QB rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :trasforma_in ;
+                 rdfs:domain :Trasformatore_feature_quantitativa ;
+                 rdfs:range :Booleana .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_QC
+:trasforma_in_QC rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :trasforma_in ;
+                 rdfs:domain :Trasformatore_feature_quantitativa ;
+                 rdfs:range :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_QQ
+:trasforma_in_QQ rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :trasforma_in ;
+                 rdfs:domain :Trasformatore_feature_quantitativa ;
+                 rdfs:range :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#utilizza
+:utilizza rdf:type owl:ObjectProperty ;
+          rdfs:domain :Algoritmo_ML ;
+          rdfs:range :Feature ;
+          rdfs:comment "Un algoritmo di ML utilizza un certo tipo di feature" ;
+          rdfs:label "utilizza" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#viene_estratta
+:viene_estratta rdf:type owl:ObjectProperty ;
+                owl:inverseOf :è_estratta ;
+                rdfs:domain :Dataset ;
+                rdfs:range :Feature ;
+                rdfs:comment "relazione che premette di poter dire che da un certo dataset viene estratta una certa feature" ;
+                rdfs:label "viene_estratta" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_applicato_su
+:è_applicato_su rdf:type owl:ObjectProperty ;
+                rdfs:domain :Apprendimento ;
+                rdfs:range :Dataset ;
+                rdfs:comment "Un certo tipo di apprendimento viene fatto su un certo dataset" ;
+                rdfs:label "è_applicato_su" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_basato_su
+:è_basato_su rdf:type owl:ObjectProperty ;
+             rdfs:domain :Distanza ;
+             rdfs:label "è_basato_su" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_estratta
+:è_estratta rdf:type owl:ObjectProperty ;
+            rdfs:comment "Una certa feature è estratta da un certo dataset" ;
+            rdfs:label "è_estratta" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_implementato
+:è_implementato rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                rdfs:comment "Un algoritmo è implementato in una una libreria che a sua volta è implementata in un certo linguaggio di programmazione" ;
+                rdfs:label "è_implementato" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_risolto_da
+:è_risolto_da rdf:type owl:ObjectProperty ;
+              rdfs:comment "Un certo task è risolta un algoritmo di ML" ;
+              rdfs:label "è_risolto_da" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_un
+:è_un rdf:type owl:ObjectProperty ;
+      rdfs:range :Algoritmo_ML ;
+      rdfs:label "è_un" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_utilizzato_per
+:è_utilizzato_per rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Dataset ;
+                  rdfs:range :Task ;
+                  rdfs:comment "Un certo dataset è utilizzato per risolvere un certo task" ;
+                  rdfs:label "è_utilizzato_per" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#combinazione_lineare
+:combinazione_lineare rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#distanze
+:distanze rdf:type owl:DatatypeProperty ;
+          rdfs:range :misure .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#esempi_pesati
+:esempi_pesati rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Ensamble_learning ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#etichettato
+:etichettato rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Dataset ;
+             rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#letterali
+:letterali rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#massimizzazione
+:massimizzazione rdf:type owl:DatatypeProperty ;
+                 rdfs:range :funzioni_probabilistiche .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#neuroni
+:neuroni rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#numero_classi
+:numero_classi rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Classificazione ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#numero_clusters
+:numero_clusters rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#numero_di_livelli
+:numero_di_livelli rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#radice
+:radice rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Algoritmo_ML ;
+        rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#restituzione_di_probabilità
+:restituzione_di_probabilità rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:range :distribuzione_probabilità .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#target_reale
+:target_reale rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Regressione ;
+              rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/resource/Artificial_neural_network
+<http://dbpedia.org/resource/Artificial_neural_network> rdf:type owl:Class ;
+                                                        owl:equivalentClass :Rete_neurale .
+
+
+###  http://dbpedia.org/resource/Cluster_analysis
+<http://dbpedia.org/resource/Cluster_analysis> rdf:type owl:Class ;
+                                               owl:equivalentClass :Clustering .
+
+
+###  http://dbpedia.org/resource/Regression_analysis
+<http://dbpedia.org/resource/Regression_analysis> rdf:type owl:Class ;
+                                                  owl:equivalentClass :Regressione .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> rdfs:subClassOf :Algoritmo_ML .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Albero
+:Albero rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :Algoritmo_ML
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :utilizza ;
+                                                     owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( :Booleana
+                                                                                        :Categorica
+                                                                                        :Quantitativa
+                                                                                      )
+                                                                        ]
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :radice ;
+                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                                      rdf:first "true"^^xsd:boolean ;
+                                                                                      rdf:rest rdf:nil
+                                                                                    ]
+                                                                        ]
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :Algoritmo_ML ;
+        rdfs:comment "Algoritmo di ML basato su alberi binari" ;
+        rdfs:label "Albero" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Algoritmo
+:Algoritmo rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Algoritmo_ML
+:Algoritmo_ML rdf:type owl:Class ;
+              rdfs:subClassOf :Algoritmo ;
+              rdfs:comment "Algoritmi di machine learning che vengono addestrati su un certo dataset" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Anomaly_detection
+:Anomaly_detection rdf:type owl:Class ;
+                   owl:equivalentClass <https://www.wikidata.org/wiki/anomaly_detection> ;
+                   rdfs:subClassOf :Descrittivo .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Apprendimento
+:Apprendimento rdf:type owl:Class ;
+               rdfs:subClassOf :Algoritmo .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Audio
+:Audio rdf:type owl:Class ;
+       rdfs:subClassOf :Dataset .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Bagging
+:Bagging rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :ha_weak_learner ;
+                                                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Algoritmo_ML
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :esempi_pesati ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                                       rdf:first "false"^^xsd:boolean ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :Ensamble_learning .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Binaria
+:Binaria rdf:type owl:Class ;
+         rdfs:subClassOf :Classificazione .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Binarizzazione
+:Binarizzazione rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature_categorica
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :trasforma_in_CB ;
+                                                             owl:someValuesFrom :Booleana
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :Trasformatore_feature_categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Booleana
+:Booleana rdf:type owl:Class ;
+          rdfs:subClassOf :Feature ;
+          owl:disjointWith :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Boosting
+:Boosting rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :ha_weak_learner ;
+                                                       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass :Algoritmo_ML
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :esempi_pesati ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:oneOf [ rdf:type rdf:List ;
+                                                                                        rdf:first "true"^^xsd:boolean ;
+                                                                                        rdf:rest rdf:nil
+                                                                                      ]
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :Ensamble_learning .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Calibrazione_Booleana
+:Calibrazione_Booleana rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature_booleana
+                                                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :prende_in_inputB ;
+                                                                                           owl:someValuesFrom :Booleana
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :trasforma_in ;
+                                                                                           owl:someValuesFrom :Quantitativa
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf :Trasformatore_feature_booleana ;
+                       rdfs:comment "Algoritmo che serve per poter assegnare una scala numerica ad una feature booleana." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Calibrazione_Categorica
+:Calibrazione_Categorica rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature_categorica
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :trasforma_in_CQ ;
+                                                                      owl:someValuesFrom :Quantitativa
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf :Trasformatore_feature_categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Categorica
+:Categorica rdf:type owl:Class ;
+            rdfs:subClassOf :Feature .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Classificazione
+:Classificazione rdf:type owl:Class ;
+                 owl:equivalentClass <https://www.wikidata.org/wiki/Classification> ;
+                 rdfs:subClassOf :Predittivo .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Clustering
+:Clustering rdf:type owl:Class ;
+            rdfs:subClassOf :Descrittivo .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:comment "Un insieme di esempi che possono essere di diverso tipo e che verrà utilizzato per addestrare e testare gli algoritmi di machine learning." ;
+         rdfs:label "Dataset" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Descrittivo
+:Descrittivo rdf:type owl:Class ;
+             rdfs:subClassOf :Task ;
+             rdfs:comment "Tipologia di Task che attraverso dei meccanismi cercano di individuare gruppi di esempi simili tra loro." ;
+             rdfs:label "Descrittivo" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Discretizzazione
+:Discretizzazione rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature_quantitativa
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :trasforma_in_QC ;
+                                                               owl:someValuesFrom :Categorica
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :Trasformatore_feature_quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Discriminativo
+:Discriminativo rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :restituzione_di_probabilità ;
+                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                       rdf:first "Target" ;
+                                                                       rdf:rest rdf:nil
+                                                                     ]
+                                                         ]
+                                    ] ;
+                rdfs:subClassOf :Probabilistico .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Distanza
+:Distanza rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :utilizza ;
+                                                       owl:someValuesFrom :Quantitativa
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :distanze ;
+                                                       owl:someValuesFrom :misure
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :Algoritmo_ML ;
+          owl:disjointWith :Lineare ;
+          rdfs:comment "Algoritmi di ML basati su misure di distanza tra gli esempi" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Ensamble_learning
+:Ensamble_learning rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> ;
+                   rdfs:comment "Algoritmi che si comporta come un aggregatore di weak learners random guess." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Feature
+:Feature rdf:type owl:Class ;
+         rdfs:comment "Caratteristica che permette di descrivere un esempio (ogni esempio potà essere descritto anche da più features)." ;
+         rdfs:label "Feature" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Firma_digitale
+:Firma_digitale rdf:type owl:Class ;
+                rdfs:subClassOf :Dataset .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Generativo
+:Generativo rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :restituzione_di_probabilità ;
+                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                   rdf:first "Target e Features" ;
+                                                                   rdf:rest rdf:nil
+                                                                 ]
+                                                     ]
+                                ] ;
+            rdfs:subClassOf :Probabilistico .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Immagine
+:Immagine rdf:type owl:Class ;
+          rdfs:subClassOf :Dataset .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Impronta_digitale
+:Impronta_digitale rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:oneOf ( :mnist_dataset
+                                                     :n2n
+                                                     :nist
+                                                     :socothing
+                                                   )
+                                       ] ;
+                   rdfs:subClassOf :Dataset .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Libreria
+:Libreria rdf:type owl:Class ;
+          rdfs:comment "Insieme di funzioni e procedure utilizzate per poter implementare varie tipologie di algoritmi." ;
+          rdfs:label "Libreria" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Lineare
+:Lineare rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :utilizza ;
+                                                      owl:someValuesFrom :Quantitativa
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :combinazione_lineare ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                                       rdf:first "true"^^xsd:boolean ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :Algoritmo_ML ;
+         rdfs:comment "Algoritmi di ML basati sull'individuazione di un iperpiano per eseguire la classificazione o la regressione" ;
+         rdfs:label "Lineare" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Linguaggio_di_programmazione
+:Linguaggio_di_programmazione rdf:type owl:Class ;
+                              rdfs:comment "Linguaggi in cui vengono implementate le varie librerie." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Multiclasse
+:Multiclasse rdf:type owl:Class ;
+             rdfs:subClassOf :Classificazione .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Non_supervisionato
+:Non_supervisionato rdf:type owl:Class ;
+                    rdfs:subClassOf :Apprendimento ;
+                    rdfs:comment "Tipologia di apprendimento in cui gli esempi non sono etichettati." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Normalizzazione
+:Normalizzazione rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :prende_in_inputQ ;
+                                                              owl:someValuesFrom :Quantitativa
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :trasforma_in_QQ ;
+                                                              owl:someValuesFrom :Quantitativa
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Trasformatore_feature_quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Numerico_Categorico
+:Numerico_Categorico rdf:type owl:Class ;
+                     rdfs:subClassOf :Dataset .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Predittivo
+:Predittivo rdf:type owl:Class ;
+            rdfs:subClassOf :Task ;
+            rdfs:comment "Tipologia di tasks che dato un certo esempio di input cerca di fornire una predizione che può essere una classe specifica oppure un valore numerico (in quest'ultimo caso quindi il target è un valore reale)." ;
+            rdfs:label "Predittivo" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Probabilistico
+:Probabilistico rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :utilizza ;
+                                                                             owl:someValuesFrom :Categorica
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :utilizza ;
+                                                                             owl:someValuesFrom :Quantitativa
+                                                                           ]
+                                                                         )
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :massimizzazione ;
+                                                             owl:someValuesFrom :funzioni_probabilistiche
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :Algoritmo_ML ;
+                rdfs:comment "Algoritmi basati su calcolo delle probabilità" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Quantitativa
+:Quantitativa rdf:type owl:Class ;
+              rdfs:subClassOf :Feature .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Ragruppamento
+:Ragruppamento rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature_categorica
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :trasforma_in_CC ;
+                                                            owl:someValuesFrom :Categorica
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :Trasformatore_feature_categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Regole
+:Regole rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :Booleana
+                                                                   :Categorica
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty :utilizza ;
+                                                                     owl:someValuesFrom :Quantitativa
+                                                                   ]
+                                                                 )
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :letterali ;
+                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                          owl:oneOf [ rdf:type rdf:List ;
+                                                                                      rdf:first "true"^^xsd:boolean ;
+                                                                                      rdf:rest rdf:nil
+                                                                                    ]
+                                                                        ]
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :Algoritmo_ML ;
+        rdfs:comment "Algoritmi di apprendimento automatico basati su regole logiche." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Regressione
+:Regressione rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :target_reale ;
+                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                        owl:oneOf [ rdf:type rdf:List ;
+                                                                    rdf:first "true"^^xsd:boolean ;
+                                                                    rdf:rest rdf:nil
+                                                                  ]
+                                                      ]
+                                 ] ;
+             rdfs:subClassOf :Predittivo .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Rete_neurale
+:Rete_neurale rdf:type owl:Class ;
+              rdfs:subClassOf :Algoritmo_ML ;
+              rdfs:comment "Algoritmi basati sulla struttura del cervello umano." ;
+              rdfs:label "Rete_neurale" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Rete_neurale_profonda
+:Rete_neurale_profonda rdf:type owl:Class ;
+                       rdfs:subClassOf :Rete_neurale .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Retina
+:Retina rdf:type owl:Class ;
+        rdfs:subClassOf :Dataset .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Supervisionato
+:Supervisionato rdf:type owl:Class ;
+                rdfs:subClassOf :Apprendimento ;
+                rdfs:comment "Tipologia di apprendimento in cui gli esempi sono etichettati." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Task
+:Task rdf:type owl:Class ;
+      rdfs:comment "Problemi del mondo reale che si cerca di risolvere utilizzando algoritmi di apprendimento automatico." ;
+      rdfs:label "Task" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Thresholding
+:Thresholding rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature_quantitativa
+                                                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty :prende_in_input ;
+                                                                                  owl:someValuesFrom :Quantitativa
+                                                                                ]
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty :trasforma_in ;
+                                                                                  owl:someValuesFrom :Booleana
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Trasformatore_feature_quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature
+:Trasformatore_feature rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :prende_in_input ;
+                                                                    owl:someValuesFrom :Feature
+                                                                  ]
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :trasforma_in ;
+                                                                    owl:someValuesFrom :Feature
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf :Algoritmo .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature_booleana
+:Trasformatore_feature_booleana rdf:type owl:Class ;
+                                owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :prende_in_inputB ;
+                                                                             owl:someValuesFrom :Booleana
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ] ;
+                                rdfs:subClassOf :Trasformatore_feature ;
+                                rdfs:comment "Algoritmo che prende in input una feature booleana e la trasforma un altro tipo di feature." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature_categorica
+:Trasformatore_feature_categorica rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :prende_in_inputC ;
+                                                                               owl:someValuesFrom :Categorica
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:subClassOf :Trasformatore_feature ;
+                                  rdfs:comment "Algoritmo che prende in input una feature categorica e la trasforma un altro tipo di feature." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature_quantitativa
+:Trasformatore_feature_quantitativa rdf:type owl:Class ;
+                                    owl:equivalentClass [ owl:intersectionOf ( :Trasformatore_feature
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty :prende_in_inputQ ;
+                                                                                 owl:someValuesFrom :Quantitativa
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                    rdfs:subClassOf :Trasformatore_feature ;
+                                    rdfs:comment "Algoritmo che prende in input una feature quantitativa e la trasforma un altro tipo di feature." .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf :Dataset .
+
+
+###  https://www.wikidata.org/wiki/Classification
+<https://www.wikidata.org/wiki/Classification> rdf:type owl:Class .
+
+
+###  https://www.wikidata.org/wiki/anomaly_detection
+<https://www.wikidata.org/wiki/anomaly_detection> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#AESDD
+:AESDD rdf:type owl:NamedIndividual ,
+                :Audio ;
+       :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#ATT-AC
+:ATT-AC rdf:type owl:NamedIndividual ,
+                 :Audio ;
+        :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Adaboost
+:Adaboost rdf:type owl:NamedIndividual ;
+          :ha_weak_learner :SVM_1 ,
+                           :SVM_2 ;
+          :è_implementato :Scikit_learn ;
+          :esempi_pesati "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#BIN_C
+:BIN_C rdf:type owl:NamedIndividual ,
+                :Binarizzazione .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#CIFAR-10
+:CIFAR-10 rdf:type owl:NamedIndividual ,
+                   :Immagine ;
+          :viene_estratta :centro_di_massa_dei_pixels ,
+                          :luminosità_pixel ,
+                          :sift ,
+                          :surf ,
+                          :valor_medio_canali_RGB ,
+                          :valori_pixels_in_scala_di_grigio ;
+          :è_utilizzato_per :riconoscimento_immagini ;
+          :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#CLB_C
+:CLB_C rdf:type owl:NamedIndividual ;
+       :prende_in_inputC :obeso ;
+       :trasforma_in_CQ :probabilità_steatosi .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#CNN
+:CNN rdf:type owl:NamedIndividual ;
+     :utilizza :centro_di_massa_dei_pixels ,
+               :luminosità_pixel ,
+               :sift ,
+               :valor_medio_canali_RGB ,
+               :valori_pixels_in_scala_di_grigio ;
+     :è_implementato :Keras ;
+     :neuroni "true"^^xsd:boolean ;
+     :numero_di_livelli 15 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Caffe
+:Caffe rdf:type owl:NamedIndividual ,
+                :Libreria ;
+       :è_implementato <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#C++> .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Decision_tree1
+:Decision_tree1 rdf:type owl:NamedIndividual ;
+                :utilizza :MFCC ,
+                          :energia_segnale ;
+                :è_implementato :Caffe ;
+                :radice "true"^^xsd:boolean ;
+                rdfs:comment "E' un'istanza di albero di decisione" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Decision_tree2
+:Decision_tree2 rdf:type owl:NamedIndividual ;
+                :utilizza :MFCC ,
+                          :energia_segnale ;
+                :è_implementato :Caffe ;
+                :radice "true"^^xsd:boolean ;
+                rdfs:comment "E' un'istanza di albero di decisione" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Emo_DB
+:Emo_DB rdf:type owl:NamedIndividual ,
+                 :Audio ;
+        :viene_estratta :MFCC ,
+                        :energia_segnale ;
+        :è_utilizzato_per :riconoscimento_emozioni ;
+        :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Equal_depth_partioning
+:Equal_depth_partioning rdf:type owl:NamedIndividual ;
+                        :prende_in_inputQ :peso ;
+                        :trasforma_in_QC :intervallo_peso .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Equal_width_partioning
+:Equal_width_partioning rdf:type owl:NamedIndividual ;
+                        :prende_in_inputQ :altezza ;
+                        :trasforma_in_QC :Intervalli_di_altezza .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Euclidea
+:Euclidea rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#GAN
+:GAN rdf:type owl:NamedIndividual ;
+     :utilizza :centro_di_massa_pixels_imagenet ,
+               :luminosità_pixel_imagenet ,
+               :valori_pixels_canali_RGB_imagenet ;
+     :è_implementato :Keras ;
+     :neuroni "true"^^xsd:boolean ;
+     :numero_di_livelli 15 ;
+     rdfs:comment "E' un'istanza di rete neurale profonda" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#GROUPING
+:GROUPING rdf:type owl:NamedIndividual ,
+                   :Ragruppamento .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Industrializzazione
+:Industrializzazione rdf:type owl:NamedIndividual ,
+                              :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Intervalli_di_altezza
+:Intervalli_di_altezza rdf:type owl:NamedIndividual ,
+                                :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Java
+:Java rdf:type owl:NamedIndividual ,
+               :Linguaggio_di_programmazione .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Joy_emotion_text_recognition
+:Joy_emotion_text_recognition rdf:type owl:NamedIndividual ;
+                              :numero_classi 2 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Keras
+:Keras rdf:type owl:NamedIndividual ,
+                :Libreria ;
+       :è_implementato :Python .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Least_mean_squares
+:Least_mean_squares rdf:type owl:NamedIndividual ;
+                    :utilizza :altezza ;
+                    :combinazione_lineare "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#MFCC
+:MFCC rdf:type owl:NamedIndividual ,
+               :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Malhanobis
+:Malhanobis rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Manhattan
+:Manhattan rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#MinMax
+:MinMax rdf:type owl:NamedIndividual ;
+        :prende_in_inputQ :altezza ;
+        :trasforma_in_QQ :altezza_tra_0_e_1 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Neuroph
+:Neuroph rdf:type owl:NamedIndividual ,
+                  :Libreria ;
+         :è_implementato :Java .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Play_tennis
+:Play_tennis rdf:type owl:NamedIndividual ,
+                      :Numerico_Categorico ;
+             :viene_estratta :cambiamento_rispetto_al_giorno_precedente ,
+                             :soleggiato ,
+                             :temperatura ,
+                             :temperatura_acqua ,
+                             :umidità ,
+                             :vento ;
+             :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Python
+:Python rdf:type owl:NamedIndividual ,
+                 :Linguaggio_di_programmazione ;
+        rdfs:comment "E' un'istanza di linguaggio di programmazione" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Random_forest
+:Random_forest rdf:type owl:NamedIndividual ;
+               :ha_weak_learner :Decision_tree1 ,
+                                :Decision_tree2 ;
+               :è_implementato :Caffe ;
+               :esempi_pesati "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#SVM
+:SVM rdf:type owl:NamedIndividual ;
+     :utilizza :MFCC ,
+               :valore_picco_firma ;
+     :è_implementato :Scikit_learn ;
+     :combinazione_lineare "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#SVM_1
+:SVM_1 rdf:type owl:NamedIndividual ;
+       :utilizza :tiri_squadra_casa ,
+                 :tiri_squadra_fuori_casa ;
+       :è_implementato :Scikit_learn ;
+       :combinazione_lineare "true"^^xsd:boolean ;
+       rdfs:comment "E' un'istanza di SVM" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#SVM_2
+:SVM_2 rdf:type owl:NamedIndividual ;
+       :utilizza :tiri_squadra_casa ,
+                 :tiri_squadra_fuori_casa ;
+       :è_implementato :Scikit_learn ;
+       :combinazione_lineare "true"^^xsd:boolean ;
+       rdfs:comment "E' un'istanza di SVM" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#SVM_one_class
+:SVM_one_class rdf:type owl:NamedIndividual ;
+               :utilizza :media_mobile_a_10_periodi_1 ,
+                         :media_mobile_a_3_periodi_1 ;
+               :è_implementato :Scikit_learn ;
+               :combinazione_lineare "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Scikit_learn
+:Scikit_learn rdf:type owl:NamedIndividual ,
+                       :Libreria ;
+              :è_implementato :Python .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#THR
+:THR rdf:type owl:NamedIndividual ;
+     :prende_in_inputQ :livello_di_glucosio ;
+     :trasforma_in_QB :diabete .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Tensorflow_146k
+:Tensorflow_146k rdf:type owl:NamedIndividual ,
+                          :Libreria ;
+                 :è_implementato <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#C++> .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Twitter_text_Emotion
+:Twitter_text_Emotion rdf:type owl:NamedIndividual ,
+                               :Numerico_Categorico ;
+                      :viene_estratta :parola_TW ;
+                      :è_utilizzato_per :Joy_emotion_text_recognition ;
+                      :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Weka
+:Weka rdf:type owl:NamedIndividual ,
+               :Libreria ;
+      :è_implementato :Java .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#altezza
+:altezza rdf:type owl:NamedIndividual ,
+                  :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#altezza_tra_0_e_1
+:altezza_tra_0_e_1 rdf:type owl:NamedIndividual ,
+                            :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#andamento_ec_apple
+:andamento_ec_apple rdf:type owl:NamedIndividual ,
+                             :Numerico_Categorico ;
+                    :viene_estratta :media_mobile_a_10_periodi_1 ,
+                                    :media_mobile_a_3_periodi_1 ;
+                    :è_utilizzato_per :anomaly_in_apple ;
+                    :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#andamento_mercato_finanziario_Apple
+:andamento_mercato_finanziario_Apple rdf:type owl:NamedIndividual ;
+                                     :target_reale "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#anomaly_in_apple
+:anomaly_in_apple rdf:type owl:NamedIndividual ,
+                           <https://www.wikidata.org/wiki/anomaly_detection> .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#appartenenza_fascia_tasse
+:appartenenza_fascia_tasse rdf:type owl:NamedIndividual ;
+                           :numero_classi 6 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#arabic_speech_corpus
+:arabic_speech_corpus rdf:type owl:NamedIndividual ,
+                               :Audio ;
+                      :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#audio_mnist
+:audio_mnist rdf:type owl:NamedIndividual ,
+                      :Audio ;
+             :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#away_team
+:away_team rdf:type owl:NamedIndividual ,
+                    :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#baved
+:baved rdf:type owl:NamedIndividual ,
+                :Audio ;
+       :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#belief_network
+:belief_network rdf:type owl:NamedIndividual ;
+                :utilizza :pil ,
+                          :popolazione_bf ;
+                :è_implementato :Neuroph ;
+                :neuroni "true"^^xsd:boolean ;
+                :numero_di_livelli 4 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#bird_audio_detection
+:bird_audio_detection rdf:type owl:NamedIndividual ,
+                               :Audio ;
+                      :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#boss_dataset
+:boss_dataset rdf:type owl:NamedIndividual ,
+                       :Video ;
+              :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cambiamento_rispetto_al_giorno_precedente
+:cambiamento_rispetto_al_giorno_precedente rdf:type owl:NamedIndividual ,
+                                                    :Booleana ;
+                                           :viene_estratta :media_esponenziale_a_3_periodi ,
+                                                           :media_mobile_a_10_periodi .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cedar
+:cedar rdf:type owl:NamedIndividual ,
+                :Firma_digitale ;
+       :viene_estratta :valore_picco_firma ;
+       :è_utilizzato_per :riconoscimento_firma ;
+       :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#centro_di_massa_dei_pixels
+:centro_di_massa_dei_pixels rdf:type owl:NamedIndividual ,
+                                     :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#centro_di_massa_pixels_imagenet
+:centro_di_massa_pixels_imagenet rdf:type owl:NamedIndividual ,
+                                          :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#chime_home
+:chime_home rdf:type owl:NamedIndividual ,
+                     :Audio ;
+            :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cityscapes_dataset
+:cityscapes_dataset rdf:type owl:NamedIndividual ,
+                             :Immagine ;
+                    :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#clima
+:clima rdf:type owl:NamedIndividual ,
+                :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#clustering_gerarchico
+:clustering_gerarchico rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#clustering_tree
+:clustering_tree rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cmu_multi_modal_sdk
+:cmu_multi_modal_sdk rdf:type owl:NamedIndividual ,
+                              :Audio ;
+                     :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#consumer_price_index
+:consumer_price_index rdf:type owl:NamedIndividual ,
+                               :Numerico_Categorico ;
+                      :viene_estratta :percentuale_consumo_anno_2020 ,
+                                      :percentuale_consumo_anno_2021 ;
+                      :è_utilizzato_per :discovery_group ;
+                      :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#dataset_calcio
+:dataset_calcio rdf:type owl:NamedIndividual ,
+                         :Numerico_Categorico ;
+                :viene_estratta :away_team ,
+                                :goals_totali_squadra_fuori_casa ,
+                                :home_team ,
+                                :nome_arbitro ,
+                                :risultato_fine_primo_tempo ,
+                                :tiri_squadra_casa ,
+                                :tiri_squadra_fuori_casa ;
+                :è_utilizzato_per :risultati_partite_di_calcio ;
+                :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#dbscan
+:dbscan rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#deep_belief_network
+:deep_belief_network rdf:type owl:NamedIndividual ;
+                     :utilizza :pil ,
+                               :popolazione ;
+                     :è_implementato :Tensorflow_146k ;
+                     :neuroni "true"^^xsd:boolean ;
+                     :numero_di_livelli 15 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#diabete
+:diabete rdf:type owl:NamedIndividual ,
+                  :Booleana .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#discovery_group
+:discovery_group rdf:type owl:NamedIndividual ;
+                 :numero_clusters 5 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#dolphin_dataset
+:dolphin_dataset rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#drive_dataset
+:drive_dataset rdf:type owl:NamedIndividual ,
+                        :Retina ;
+               :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#energia_segnale
+:energia_segnale rdf:type owl:NamedIndividual ,
+                          :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#expectation_maximization
+:expectation_maximization rdf:type owl:NamedIndividual ;
+                          :utilizza :parola_TW ;
+                          :è_implementato :Scikit_learn ;
+                          :restituzione_di_probabilità "Target" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#fdd
+:fdd rdf:type owl:NamedIndividual ,
+              :Video ;
+     :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#gdp
+:gdp rdf:type owl:NamedIndividual ,
+              :Numerico_Categorico ;
+     :viene_estratta :Industrializzazione ,
+                     :clima ,
+                     :popolazione ;
+     :è_utilizzato_per :appartenenza_fascia_tasse ,
+                       :paesi_con_pil_simile ;
+     :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#goals_totali_squadra_casa
+:goals_totali_squadra_casa rdf:type owl:NamedIndividual ,
+                                    :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#goals_totali_squadra_fuori_casa
+:goals_totali_squadra_fuori_casa rdf:type owl:NamedIndividual ,
+                                          :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#google_open_image
+:google_open_image rdf:type owl:NamedIndividual ,
+                            :Immagine ;
+                   :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#gpds
+:gpds rdf:type owl:NamedIndividual ,
+               :Firma_digitale ;
+      :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#grandezza_regione
+:grandezza_regione rdf:type owl:NamedIndividual ,
+                            :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#harris_corner_detection
+:harris_corner_detection rdf:type owl:NamedIndividual ,
+                                  :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#hidden_markov_model
+:hidden_markov_model rdf:type owl:NamedIndividual ;
+                     :utilizza :parola ,
+                               :tag_parola ;
+                     :è_implementato :Weka ;
+                     :massimizzazione "Conditional Likelihood" ;
+                     :restituzione_di_probabilità "Target e Features" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#home_team
+:home_team rdf:type owl:NamedIndividual ,
+                    :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#hopfield_nets
+:hopfield_nets rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#icdar_2011
+:icdar_2011 rdf:type owl:NamedIndividual ,
+                     :Firma_digitale ;
+            :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#id_rid
+:id_rid rdf:type owl:NamedIndividual ,
+                 :Retina ;
+        :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#imagenet
+:imagenet rdf:type owl:NamedIndividual ,
+                   :Immagine ;
+          :viene_estratta :centro_di_massa_pixels_imagenet ,
+                          :luminosità_pixel_imagenet ,
+                          :valori_pixels_canali_RGB_imagenet ;
+          :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#indipendent_component_analysis
+:indipendent_component_analysis rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#intervallo_peso
+:intervallo_peso rdf:type owl:NamedIndividual ,
+                          :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#iris_flower_dataset
+:iris_flower_dataset rdf:type owl:NamedIndividual ,
+                              :Numerico_Categorico .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#isolation_forest
+:isolation_forest rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#k_means
+:k_means rdf:type owl:NamedIndividual ;
+         :utilizza :percentuale_consumo_anno_2020 ,
+                   :percentuale_consumo_anno_2021 ;
+         :è_implementato :Weka ;
+         :distanze "Manhattan" ;
+         rdfs:comment "E' un'istanza di algoritmo di clustering" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#k_medoid
+:k_medoid rdf:type owl:NamedIndividual ;
+          :utilizza :Industrializzazione ,
+                    :clima ,
+                    :popolazione ;
+          :è_implementato :Weka ;
+          :distanze "Malhanobis" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#knn
+:knn rdf:type owl:NamedIndividual ;
+     :utilizza :goals_totali_squadra_casa ,
+               :goals_totali_squadra_fuori_casa ,
+               :tiri_squadra_casa ,
+               :tiri_squadra_fuori_casa ;
+     :è_implementato :Caffe ;
+     :distanze "Euclidea" ;
+     rdfs:comment "E' un'istanza di un algoritmo basato sulla distanza" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#label_propagation
+:label_propagation rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#lda
+:lda rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#linear_regression
+:linear_regression rdf:type owl:NamedIndividual ;
+                   :utilizza :media_esponenziale_a_3_periodi ,
+                             :media_mobile_a_10_periodi ;
+                   :è_implementato :Scikit_learn ;
+                   :combinazione_lineare "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#livello_di_glucosio
+:livello_di_glucosio rdf:type owl:NamedIndividual ,
+                              :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#local_outlier
+:local_outlier rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#luminosità_pixel
+:luminosità_pixel rdf:type owl:NamedIndividual ,
+                           :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#luminosità_pixel_imagenet
+:luminosità_pixel_imagenet rdf:type owl:NamedIndividual ,
+                                    :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#lung_cancer
+:lung_cancer rdf:type owl:NamedIndividual ,
+                      :Numerico_Categorico ;
+             :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mcyt
+:mcyt rdf:type owl:NamedIndividual ,
+               :Firma_digitale ;
+      :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_esponenziale_a_3_periodi
+:media_esponenziale_a_3_periodi rdf:type owl:NamedIndividual ,
+                                         :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_mobile_a_10_periodi
+:media_mobile_a_10_periodi rdf:type owl:NamedIndividual ,
+                                    :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_mobile_a_10_periodi_1
+:media_mobile_a_10_periodi_1 rdf:type owl:NamedIndividual ,
+                                      :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_mobile_a_3_periodi_1
+:media_mobile_a_3_periodi_1 rdf:type owl:NamedIndividual ,
+                                     :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mfd
+:mfd rdf:type owl:NamedIndividual ,
+              :Video ;
+     :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mmu_iris_dataset
+:mmu_iris_dataset rdf:type owl:NamedIndividual ,
+                           :Retina ;
+                  :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mnist_dataset
+:mnist_dataset rdf:type owl:NamedIndividual ;
+               :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#multilayer_perceptron
+:multilayer_perceptron rdf:type owl:NamedIndividual ;
+                       :utilizza :valore_picco_firma ;
+                       :è_implementato :Neuroph ;
+                       :neuroni "true"^^xsd:boolean ;
+                       :numero_di_livelli 5 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#n2n
+:n2n rdf:type owl:NamedIndividual ;
+     :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#nd_iris_0405
+:nd_iris_0405 rdf:type owl:NamedIndividual ,
+                       :Retina ;
+              :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#nist
+:nist rdf:type owl:NamedIndividual ;
+      :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#nome_arbitro
+:nome_arbitro rdf:type owl:NamedIndividual ,
+                       :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#obeso
+:obeso rdf:type owl:NamedIndividual ,
+                :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#optics_algorithm
+:optics_algorithm rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#ordered_rule_lists
+:ordered_rule_lists rdf:type owl:NamedIndividual ;
+                    :utilizza :altezza ;
+                    :letterali "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#paesi_con_pil_simile
+:paesi_con_pil_simile rdf:type owl:NamedIndividual ;
+                      :numero_clusters 10 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#parola
+:parola rdf:type owl:NamedIndividual ,
+                 :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#parola_TW
+:parola_TW rdf:type owl:NamedIndividual ,
+                    :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#percentuale_consumo_anno_2020
+:percentuale_consumo_anno_2020 rdf:type owl:NamedIndividual ,
+                                        :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#percentuale_consumo_anno_2021
+:percentuale_consumo_anno_2021 rdf:type owl:NamedIndividual ,
+                                        :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#peso
+:peso rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#peso_tra_0_e_1
+:peso_tra_0_e_1 rdf:type owl:NamedIndividual ,
+                         :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#pil
+:pil rdf:type owl:NamedIndividual ,
+              :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#pop_cw
+:pop_cw rdf:type owl:NamedIndividual ,
+                 :Numerico_Categorico ;
+        :viene_estratta :pil ,
+                        :popolazione_bf ;
+        :è_utilizzato_per :appartenenza_fascia_tasse ;
+        :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#popolazione
+:popolazione rdf:type owl:NamedIndividual ,
+                      :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#popolazione_bf
+:popolazione_bf rdf:type owl:NamedIndividual ,
+                         :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prezzo_azioni_apple_ultimo_anno
+:prezzo_azioni_apple_ultimo_anno rdf:type owl:NamedIndividual ,
+                                          :Numerico_Categorico ;
+                                 :viene_estratta :media_esponenziale_a_3_periodi ,
+                                                 :media_mobile_a_10_periodi ;
+                                 :è_utilizzato_per :andamento_mercato_finanziario_Apple ;
+                                 :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#principal_component_analysis
+:principal_component_analysis rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#probabilità_steatosi
+:probabilità_steatosi rdf:type owl:NamedIndividual ,
+                               :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#regressione_logistica
+:regressione_logistica rdf:type owl:NamedIndividual ;
+                       :utilizza :MFCC ;
+                       :è_implementato :Weka ;
+                       :massimizzazione "Conditional Likelihood" ;
+                       :restituzione_di_probabilità "Target" .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#rf_mid
+:rf_mid rdf:type owl:NamedIndividual ,
+                 :Retina ;
+        :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#riconoscimento_emozioni
+:riconoscimento_emozioni rdf:type owl:NamedIndividual ;
+                         :numero_classi 6 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#riconoscimento_firma
+:riconoscimento_firma rdf:type owl:NamedIndividual ;
+                      :numero_classi 2 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#riconoscimento_immagini
+:riconoscimento_immagini rdf:type owl:NamedIndividual ;
+                         :numero_classi 10 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#risultati_partite_di_calcio
+:risultati_partite_di_calcio rdf:type owl:NamedIndividual ;
+                             :numero_classi 3 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#risultato_fine_primo_tempo
+:risultato_fine_primo_tempo rdf:type owl:NamedIndividual ,
+                                     :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#sesso
+:sesso rdf:type owl:NamedIndividual ,
+                :Booleana .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#sift
+:sift rdf:type owl:NamedIndividual ,
+               :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#sigmoid_belief_net
+:sigmoid_belief_net rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#sigsa
+:sigsa rdf:type owl:NamedIndividual ,
+                :Firma_digitale ;
+       :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#similarity_ranking
+:similarity_ranking rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#socothing
+:socothing rdf:type owl:NamedIndividual ,
+                    :Numerico_Categorico ;
+           :etichettato "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#soleggiato
+:soleggiato rdf:type owl:NamedIndividual ,
+                     :Booleana .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#som
+:som rdf:type owl:NamedIndividual ;
+     :utilizza :valor_medio_canali_RGB ;
+     :è_implementato :Tensorflow_146k ;
+     :neuroni "true"^^xsd:boolean ;
+     :numero_di_livelli 24 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#stanford_dogs_dataset
+:stanford_dogs_dataset rdf:type owl:NamedIndividual ,
+                                :Immagine ;
+                       :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#statistical_normalization
+:statistical_normalization rdf:type owl:NamedIndividual ;
+                           :prende_in_inputQ :tiri_squadra_casa ;
+                           :trasforma_in_QQ :tiri_squadra_casa_con_media_zero_e_varianza_1 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#surf
+:surf rdf:type owl:NamedIndividual ,
+               :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tag_parola
+:tag_parola rdf:type owl:NamedIndividual ,
+                     :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#temperatura
+:temperatura rdf:type owl:NamedIndividual ,
+                      :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#temperatura_acqua
+:temperatura_acqua rdf:type owl:NamedIndividual ,
+                            :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tiri_squadra_casa
+:tiri_squadra_casa rdf:type owl:NamedIndividual ,
+                            :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tiri_squadra_casa_con_media_zero_e_varianza_1
+:tiri_squadra_casa_con_media_zero_e_varianza_1 rdf:type owl:NamedIndividual ,
+                                                        :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tiri_squadra_fuori_casa
+:tiri_squadra_fuori_casa rdf:type owl:NamedIndividual ,
+                                  :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasductive_support_vector_machine
+:trasductive_support_vector_machine rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#umidità
+:umidità rdf:type owl:NamedIndividual ,
+                  :Categorica .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#urban_dataset
+:urban_dataset rdf:type owl:NamedIndividual ,
+                        :Video ;
+               :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#urban_motorbike_dataset
+:urban_motorbike_dataset rdf:type owl:NamedIndividual ,
+                                  :Video ;
+                         :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#urfd
+:urfd rdf:type owl:NamedIndividual ,
+               :Video ;
+      :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#utsig
+:utsig rdf:type owl:NamedIndividual ,
+                :Firma_digitale ;
+       :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valor_medio_canali_RGB
+:valor_medio_canali_RGB rdf:type owl:NamedIndividual ,
+                                 :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valore_picco_firma
+:valore_picco_firma rdf:type owl:NamedIndividual ,
+                             :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valori_pixels_canali_RGB_imagenet
+:valori_pixels_canali_RGB_imagenet rdf:type owl:NamedIndividual ,
+                                            :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valori_pixels_in_scala_di_grigio
+:valori_pixels_in_scala_di_grigio rdf:type owl:NamedIndividual ,
+                                           :Quantitativa .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#variational_autoencoder
+:variational_autoencoder rdf:type owl:NamedIndividual ;
+                         :neuroni "true"^^xsd:boolean ;
+                         :numero_di_livelli 3 .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#vento
+:vento rdf:type owl:NamedIndividual ,
+                :Booleana .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#wikineural_it
+:wikineural_it rdf:type owl:NamedIndividual ,
+                        :Numerico_Categorico ;
+               :viene_estratta :parola ,
+                               :tag_parola ;
+               :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#xview
+:xview rdf:type owl:NamedIndividual ,
+                :Immagine ;
+       :etichettato "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#C++
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#C++> rdf:type owl:NamedIndividual ,
+                                                                                       :Linguaggio_di_programmazione ;
+                                                                              rdfs:comment "E' un'istanza di linguaggio di programmazione" .
+
+
+###  https://www.wikidata.org/wiki/Calibration_booleana
+<https://www.wikidata.org/wiki/Calibration_booleana> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://dbpedia.org/resource/Artificial_neural_network> <http://dbpedia.org/resource/Artificial_neural_network> "http://dbpedia.org/page/Artificial_neural_network"^^xsd:anyURI .
+
+
+<http://dbpedia.org/resource/Cluster_analysis> <https://www.wikidata.org/wiki/anomaly_detection> "https://dbpedia.org/page/Cluster_analysis"^^xsd:anyURI .
+
+
+<http://dbpedia.org/resource/Regression_analysis> <http://dbpedia.org/resource/Regression_analysis> "https://dbpedia.org/page/Regression_analysis"^^xsd:anyURI .
+
+
+<https://www.wikidata.org/wiki/Classification> <https://www.wikidata.org/wiki/Classification> "https://www.wikidata.org/wiki/Q13582682"^^xsd:anyURI .
+
+
+<https://www.wikidata.org/wiki/anomaly_detection> <https://www.wikidata.org/wiki/anomaly_detection> "https://www.wikidata.org/wiki/Q3560506"^^xsd:anyURI .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CIFAR-10
+                        :Emo_DB
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CIFAR-10
+                        :cedar
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CNN
+                        :GAN
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CNN
+                        :SVM
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CNN
+                        :knn
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree1
+                        :Decision_tree2
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree1
+                        :GAN
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree1
+                        :SVM
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree1
+                        :knn
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree1
+                        :ordered_rule_lists
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree1
+                        :regressione_logistica
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree2
+                        :GAN
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree2
+                        :Random_forest
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree2
+                        :SVM
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree2
+                        :knn
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree2
+                        :ordered_rule_lists
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Decision_tree2
+                        :regressione_logistica
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Emo_DB
+                        :cedar
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Euclidea
+                        :Malhanobis
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Euclidea
+                        :Manhattan
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :GAN
+                        :Random_forest
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :GAN
+                        :SVM
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :GAN
+                        :k_means
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :GAN
+                        :k_medoid
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :GAN
+                        :knn
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :GAN
+                        :regressione_logistica
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :GAN
+                        :som
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :MFCC
+                        :altezza
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :MFCC
+                        :energia_segnale
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Malhanobis
+                        :Manhattan
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Random_forest
+                        :SVM
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Random_forest
+                        :knn
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Random_forest
+                        :ordered_rule_lists
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Random_forest
+                        :regressione_logistica
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :SVM_1
+                        :SVM_2
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :SVM_one_class
+                        :knn
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :altezza
+                        :altezza_tra_0_e_1
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :altezza
+                        :peso
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :altezza
+                        :peso_tra_0_e_1
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :altezza_tra_0_e_1
+                        :peso
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :altezza_tra_0_e_1
+                        :peso_tra_0_e_1
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :peso
+                        :peso_tra_0_e_1
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :riconoscimento_emozioni
+                        :riconoscimento_firma
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :riconoscimento_emozioni
+                        :riconoscimento_immagini
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :riconoscimento_emozioni
+                        :risultati_partite_di_calcio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :riconoscimento_firma
+                        :riconoscimento_immagini
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :riconoscimento_firma
+                        :risultati_partite_di_calcio
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :riconoscimento_immagini
+                        :risultati_partite_di_calcio
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Se un algoritmo utilizza una certa feature e questo algoritmo ha dei weak  learnes, allora anche i weak learners utilizzeranno quella feature" ;
+   rdfs:label "S8" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Algoritmo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :utilizza ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/f>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :ha_weak_learner ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :utilizza ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/f>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Se un algoritmo di ML è addestrato su un certo dataset non etichettato allora l'algoritmo è addestrato in maniera non supervisionata." ;
+   rdfs:label "S7" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Algoritmo_ML ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Dataset ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/d>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :etichettato ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/d> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first "false"^^xsd:boolean ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :addestrato_su ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/d>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Non_supervisionato ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Se un algoritmo di ML è addestrato su un certo dataset etichettato allora l'algoritmo è addestrato in maniera supervisionata." ;
+   rdfs:label "S6" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Algoritmo_ML ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Dataset ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/d>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :etichettato ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/d> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first "true"^^xsd:boolean ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :addestrato_su ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/d>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Supervisionato ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Se un task di classificazione ha un numero di classi esattamente uguale a 2, allora  quello è un task di classificazione binaria." ;
+   rdfs:label "S4" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Classificazione ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :numero_classi ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 2 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Binaria ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Se un task di classificazione ha un numero di classi maggiore di 2, allora quello è  un task di classificazione multiclasse." ;
+   rdfs:label "S5" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Classificazione ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :numero_classi ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 2 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Multiclasse ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "se un algoritmo utilizza features quantitative, ha neuroni e il numero di livelli è  maggiore strettamente di 0, allora è una rete neurale" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Quantitativa ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/f>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Algoritmo_ML ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :utilizza ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/f>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :neuroni ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first "true"^^xsd:boolean ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :numero_di_livelli ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n> ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 0 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Rete_neurale ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "se un algoritmo utilizza features quantitative, ha neuroni e il numero di livelli è maggiore strettamente di 10, allora è una rete neurale profonda." ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Quantitativa ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/f>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Algoritmo_ML ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :utilizza ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/f>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :neuroni ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/e> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first "true"^^xsd:boolean ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :numero_di_livelli ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n> ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 10 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Rete_neurale_profonda ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Se una certa istanza di Task t ha un certo numero di clusters n e questo n è  maggiore di 0, allora quell’istanza è un task di Clustering." ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Task ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :numero_clusters ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/n> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 0 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Clustering ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/t>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

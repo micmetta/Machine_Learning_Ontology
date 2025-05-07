@@ -1,0 +1,2853 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.ontologydesignpatterns.org/cp/owl/componency.owl", "http://dbpedia.org/resource", "http://www.ontologydesignpatterns.org/cp/owl/partof.owl", "http://www.w3.org/2001/XMLSchema", "https://www.wikidata.org/wiki" ],
+    "title" : {
+      "undefined" : "Machine Learning"
+    },
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "author" : [ "Pietro Sangermano", "Michele Metta" ],
+    "description" : {
+      "undefined" : "Ontologia che cerca di rappresentare il dominio dell'apprendimento automatico con riferimenti non solo agli algoritmi specifici utilizzati in questo ambito ma anche a quelli che sono i tasks che possono essere risolti, i vari tipi di datasets e le diverse tipologie di features che possono essere utilizzate."
+    },
+    "labels" : {
+      "undefined" : "Machine Learning ontology"
+    },
+    "other" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "15/07/2022",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Pietro Sangermano",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Michele Metta",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "ML",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Machine Learning",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "8",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "53",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "55",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "130",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "152",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "157",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "4",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://www.wikidata.org/wiki/Classification",
+    "baseIri" : "https://www.wikidata.org/wiki",
+    "instances" : 0,
+    "annotations" : {
+      "Classification" : [ {
+        "identifier" : "Classification",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/wiki/Q13582682",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Classification"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Non_supervisionato",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Non_supervisionato"
+    },
+    "comment" : {
+      "undefined" : "Tipologia di apprendimento in cui gli esempi non sono etichettati."
+    },
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Bagging",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bagging"
+    },
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://dbpedia.org/resource/Artificial_neural_network",
+    "baseIri" : "http://dbpedia.org/resource",
+    "instances" : 0,
+    "annotations" : {
+      "Artificial_neural_network" : [ {
+        "identifier" : "Artificial_neural_network",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/page/Artificial_neural_network",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Artificial_neural_network"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Predittivo",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Predittivo",
+      "undefined" : "Predittivo"
+    },
+    "subClasses" : [ "38", "4" ],
+    "comment" : {
+      "undefined" : "Tipologia di tasks che dato un certo esempio di input cerca di fornire una predizione che può essere una classe specifica oppure un valore numerico (in quest'ultimo caso quindi il target è un valore reale)."
+    },
+    "id" : "37",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trasformatore_feature"
+    },
+    "subClasses" : [ "34", "32", "40" ],
+    "id" : "21",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Binarizzazione",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Binarizzazione"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#BIN_C",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "BIN_C"
+      }
+    } ],
+    "intersection" : [ "40" ],
+    "attributes" : [ "intersection" ],
+    "id" : "42",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "43",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Dataset",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset",
+      "undefined" : "Dataset"
+    },
+    "subClasses" : [ "36", "30", "27", "1", "47", "48", "49" ],
+    "comment" : {
+      "undefined" : "Un insieme di esempi che possono essere di diverso tipo e che verrà utilizzato per addestrare e testare gli algoritmi di machine learning."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://www.wikidata.org/wiki/anomaly_detection",
+    "baseIri" : "https://www.wikidata.org/wiki",
+    "instances" : 0,
+    "annotations" : {
+      "anomaly_detection" : [ {
+        "identifier" : "anomaly_detection",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/wiki/Q3560506",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "anomaly_detection"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#anomaly_in_apple",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "anomaly_in_apple"
+      }
+    } ],
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Rete_neurale",
+    "equivalent" : [ "28" ],
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rete_neurale",
+      "undefined" : "Rete_neurale"
+    },
+    "subClasses" : [ "54" ],
+    "comment" : {
+      "undefined" : "Algoritmi basati sulla struttura del cervello umano."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "53",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Discretizzazione",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Discretizzazione"
+    },
+    "intersection" : [ "34" ],
+    "attributes" : [ "intersection" ],
+    "id" : "55",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "56",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Discriminativo",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Discriminativo"
+    },
+    "id" : "57",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Immagine",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Immagine"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#google_open_image",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "google_open_image"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cityscapes_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "cityscapes_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#stanford_dogs_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "stanford_dogs_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#imagenet",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "imagenet"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#xview",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "xview"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#CIFAR-10",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "CIFAR-10"
+      }
+    } ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "59",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#distribuzione_probabilità",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "distribuzione_probabilità"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Feature",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Feature",
+      "undefined" : "Feature"
+    },
+    "subClasses" : [ "64", "65", "66" ],
+    "comment" : {
+      "undefined" : "Caratteristica che permette di descrivere un esempio (ogni esempio potà essere descritto anche da più features)."
+    },
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Calibrazione_Booleana",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Calibrazione_Booleana"
+    },
+    "intersection" : [ "32" ],
+    "comment" : {
+      "undefined" : "Algoritmo che serve per poter assegnare una scala numerica ad una feature booleana."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "69",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Ensamble_learning",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ensamble_learning"
+    },
+    "subClasses" : [ "18", "80" ],
+    "comment" : {
+      "undefined" : "Algoritmi che si comporta come un aggregatore di weak learners random guess."
+    },
+    "id" : "19",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Lineare",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Lineare",
+      "undefined" : "Lineare"
+    },
+    "comment" : {
+      "undefined" : "Algoritmi di ML basati sull'individuazione di un iperpiano per eseguire la classificazione o la regressione"
+    },
+    "id" : "83",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Anomaly_detection",
+    "equivalent" : [ "50" ],
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Anomaly_detection"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "84",
+    "superClasses" : [ "85" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Audio",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Audio"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#chime_home",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "chime_home"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#AESDD",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "AESDD"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cmu_multi_modal_sdk",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "cmu_multi_modal_sdk"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Emo_DB",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Emo_DB"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#arabic_speech_corpus",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "arabic_speech_corpus"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#baved",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "baved"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#bird_audio_detection",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "bird_audio_detection"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#audio_mnist",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "audio_mnist"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#ATT-AC",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "ATT-AC"
+      }
+    } ],
+    "id" : "48",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Albero",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Albero",
+      "undefined" : "Albero"
+    },
+    "intersection" : [ "12" ],
+    "comment" : {
+      "undefined" : "Algoritmo di ML basato su alberi binari"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "89",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Firma_digitale",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Firma_digitale"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#gpds",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "gpds"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#utsig",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "utsig"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#sigsa",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "sigsa"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cedar",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "cedar"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mcyt",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "mcyt"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#icdar_2011",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "icdar_2011"
+      }
+    } ],
+    "id" : "27",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Video",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Video"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#urban_motorbike_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "urban_motorbike_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#urfd",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "urfd"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#fdd",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "fdd"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#urban_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "urban_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#boss_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "boss_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mfd",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "mfd"
+      }
+    } ],
+    "id" : "47",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Descrittivo",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Descrittivo",
+      "undefined" : "Descrittivo"
+    },
+    "subClasses" : [ "84", "98" ],
+    "comment" : {
+      "undefined" : "Tipologia di Task che attraverso dei meccanismi cercano di individuare gruppi di esempi simili tra loro."
+    },
+    "id" : "85",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Ragruppamento",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ragruppamento"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#GROUPING",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "GROUPING"
+      }
+    } ],
+    "intersection" : [ "40" ],
+    "attributes" : [ "intersection" ],
+    "id" : "109",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Probabilistico",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Probabilistico"
+    },
+    "subClasses" : [ "101", "57" ],
+    "comment" : {
+      "undefined" : "Algoritmi basati su calcolo delle probabilità"
+    },
+    "id" : "58",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Algoritmo_ML",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Algoritmo_ML"
+    },
+    "subClasses" : [ "106", "53", "89", "94", "58", "83", "72" ],
+    "comment" : {
+      "undefined" : "Algoritmi di machine learning che vengono addestrati su un certo dataset"
+    },
+    "id" : "12",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature_quantitativa",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trasformatore_feature_quantitativa"
+    },
+    "subClasses" : [ "75", "55", "114" ],
+    "intersection" : [ "21" ],
+    "comment" : {
+      "undefined" : "Algoritmo che prende in input una feature quantitativa e la trasforma un altro tipo di feature."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "34",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Retina",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Retina"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#id_rid",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "id_rid"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#drive_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "drive_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mmu_iris_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "mmu_iris_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#rf_mid",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "rf_mid"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#nd_iris_0405",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "nd_iris_0405"
+      }
+    } ],
+    "id" : "49",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Libreria",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Libreria",
+      "undefined" : "Libreria"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Keras",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Keras"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Caffe",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Caffe"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Tensorflow_146k",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Tensorflow_146k"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Neuroph",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Neuroph"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Weka",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Weka"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Scikit_learn",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Scikit_learn"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Insieme di funzioni e procedure utilizzate per poter implementare varie tipologie di algoritmi."
+    },
+    "id" : "125"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Impronta_digitale",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Impronta_digitale"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#n2n",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "n2n"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#socothing",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "socothing"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#mnist_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "mnist_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#nist",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "nist"
+      }
+    } ],
+    "id" : "36",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Classificazione",
+    "equivalent" : [ "8" ],
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Classificazione"
+    },
+    "subClasses" : [ "128", "129" ],
+    "attributes" : [ "equivalent" ],
+    "id" : "38",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Boosting",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Boosting"
+    },
+    "id" : "80",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature_categorica",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trasformatore_feature_categorica"
+    },
+    "subClasses" : [ "130", "109", "42" ],
+    "intersection" : [ "21" ],
+    "comment" : {
+      "undefined" : "Algoritmo che prende in input una feature categorica e la trasforma un altro tipo di feature."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "40",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Calibrazione_Categorica",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Calibrazione_Categorica"
+    },
+    "intersection" : [ "40" ],
+    "attributes" : [ "intersection" ],
+    "id" : "130",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Binaria",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Binaria"
+    },
+    "id" : "129",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Supervisionato",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Supervisionato"
+    },
+    "comment" : {
+      "undefined" : "Tipologia di apprendimento in cui gli esempi sono etichettati."
+    },
+    "id" : "135",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://dbpedia.org/resource/Regression_analysis",
+    "baseIri" : "http://dbpedia.org/resource",
+    "instances" : 0,
+    "annotations" : {
+      "Regression_analysis" : [ {
+        "identifier" : "Regression_analysis",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Regression_analysis",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Regression_analysis"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "152"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Object",
+      "en" : "Object"
+    },
+    "subClasses" : [ "19" ],
+    "comment" : {
+      "undefined" : "Any physical, social, or mental object, or a substance"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#misure",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "id" : "156",
+    "label" : {
+      "IRI-based" : "misure"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Linguaggio_di_programmazione",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Linguaggio_di_programmazione"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Java",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Java"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#C++",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "comment" : {
+        "undefined" : "E' un'istanza di linguaggio di programmazione"
+      },
+      "labels" : {
+        "IRI-based" : "C++"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Python",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "comment" : {
+        "undefined" : "E' un'istanza di linguaggio di programmazione"
+      },
+      "labels" : {
+        "IRI-based" : "Python"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Linguaggi in cui vengono implementate le varie librerie."
+    },
+    "id" : "157"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#funzioni_probabilistiche",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "id" : "82",
+    "label" : {
+      "IRI-based" : "funzioni_probabilistiche"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Multiclasse",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Multiclasse"
+    },
+    "id" : "128",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Generativo",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Generativo"
+    },
+    "id" : "101",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Numerico_Categorico",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Numerico_Categorico"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#wikineural_it",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "wikineural_it"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#lung_cancer",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "lung_cancer"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prezzo_azioni_apple_ultimo_anno",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "prezzo_azioni_apple_ultimo_anno"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#iris_flower_dataset",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "iris_flower_dataset"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#gdp",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "gdp"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Twitter_text_Emotion",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Twitter_text_Emotion"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#socothing",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "socothing"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#consumer_price_index",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "consumer_price_index"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Play_tennis",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Play_tennis"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#pop_cw",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "pop_cw"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#dataset_calcio",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "dataset_calcio"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#andamento_ec_apple",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "andamento_ec_apple"
+      }
+    } ],
+    "id" : "30",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Normalizzazione",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Normalizzazione"
+    },
+    "id" : "114",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Booleana",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Booleana"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#sesso",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "sesso"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#vento",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "vento"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#soleggiato",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "soleggiato"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#diabete",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "diabete"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#cambiamento_rispetto_al_giorno_precedente",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "cambiamento_rispetto_al_giorno_precedente"
+      }
+    } ],
+    "id" : "66",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Trasformatore_feature_booleana",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trasformatore_feature_booleana"
+    },
+    "subClasses" : [ "69" ],
+    "intersection" : [ "21" ],
+    "comment" : {
+      "undefined" : "Algoritmo che prende in input una feature booleana e la trasforma un altro tipo di feature."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "32",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Regressione",
+    "equivalent" : [ "152" ],
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Regressione"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "4",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Task",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task",
+      "undefined" : "Task"
+    },
+    "subClasses" : [ "37", "85" ],
+    "comment" : {
+      "undefined" : "Problemi del mondo reale che si cerca di risolvere utilizzando algoritmi di apprendimento automatico."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Algoritmo",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Algoritmo"
+    },
+    "subClasses" : [ "12", "21", "10" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Thresholding",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Thresholding"
+    },
+    "intersection" : [ "34" ],
+    "attributes" : [ "intersection" ],
+    "id" : "75",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Categorica",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Categorica"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Intervalli_di_altezza",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Intervalli_di_altezza"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#intervallo_peso",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "intervallo_peso"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#clima",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "clima"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Industrializzazione",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "Industrializzazione"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#temperatura",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "temperatura"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#home_team",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "home_team"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#risultato_fine_primo_tempo",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "risultato_fine_primo_tempo"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#nome_arbitro",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "nome_arbitro"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#obeso",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "obeso"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tag_parola",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "tag_parola"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#grandezza_regione",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "grandezza_regione"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#parola_TW",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "parola_TW"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#umidità",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "umidità"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#temperatura_acqua",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "temperatura_acqua"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#away_team",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "away_team"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#parola",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "parola"
+      }
+    } ],
+    "id" : "65",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Distanza",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Distanza"
+    },
+    "comment" : {
+      "undefined" : "Algoritmi di ML basati su misure di distanza tra gli esempi"
+    },
+    "id" : "94",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Apprendimento",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Apprendimento"
+    },
+    "subClasses" : [ "135", "9" ],
+    "id" : "10",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://dbpedia.org/resource/Cluster_analysis",
+    "baseIri" : "http://dbpedia.org/resource",
+    "instances" : 0,
+    "annotations" : {
+      "anomaly_detection" : [ {
+        "identifier" : "anomaly_detection",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/page/Cluster_analysis",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Cluster_analysis"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "163"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Regole",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Regole"
+    },
+    "comment" : {
+      "undefined" : "Algoritmi di apprendimento automatico basati su regole logiche."
+    },
+    "id" : "106",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Quantitativa",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Quantitativa"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tiri_squadra_casa",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "tiri_squadra_casa"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_mobile_a_10_periodi",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "media_mobile_a_10_periodi"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#sift",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "sift"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valori_pixels_canali_RGB_imagenet",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "valori_pixels_canali_RGB_imagenet"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#altezza",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "altezza"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#energia_segnale",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "energia_segnale"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_esponenziale_a_3_periodi",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "media_esponenziale_a_3_periodi"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#percentuale_consumo_anno_2020",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "percentuale_consumo_anno_2020"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#percentuale_consumo_anno_2021",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "percentuale_consumo_anno_2021"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valor_medio_canali_RGB",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "valor_medio_canali_RGB"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tiri_squadra_fuori_casa",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "tiri_squadra_fuori_casa"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#goals_totali_squadra_fuori_casa",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "goals_totali_squadra_fuori_casa"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#surf",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "surf"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#probabilità_steatosi",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "probabilità_steatosi"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#livello_di_glucosio",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "livello_di_glucosio"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#popolazione",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "popolazione"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#popolazione_bf",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "popolazione_bf"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#MFCC",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "MFCC"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_mobile_a_3_periodi_1",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "media_mobile_a_3_periodi_1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#centro_di_massa_dei_pixels",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "centro_di_massa_dei_pixels"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#pil",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "pil"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#media_mobile_a_10_periodi_1",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "media_mobile_a_10_periodi_1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#centro_di_massa_pixels_imagenet",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "centro_di_massa_pixels_imagenet"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valore_picco_firma",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "valore_picco_firma"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#peso_tra_0_e_1",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "peso_tra_0_e_1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#valori_pixels_in_scala_di_grigio",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "valori_pixels_in_scala_di_grigio"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#harris_corner_detection",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "harris_corner_detection"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#altezza_tra_0_e_1",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "altezza_tra_0_e_1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#goals_totali_squadra_casa",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "goals_totali_squadra_casa"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#tiri_squadra_casa_con_media_zero_e_varianza_1",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "tiri_squadra_casa_con_media_zero_e_varianza_1"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#luminosità_pixel_imagenet",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "luminosità_pixel_imagenet"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#luminosità_pixel",
+      "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+      "labels" : {
+        "IRI-based" : "luminosità_pixel"
+      }
+    } ],
+    "id" : "64",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Clustering",
+    "equivalent" : [ "163" ],
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Clustering"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "98",
+    "superClasses" : [ "85" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#Rete_neurale_profonda",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rete_neurale_profonda"
+    },
+    "id" : "54",
+    "superClasses" : [ "53" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "150",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "154",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "159",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "166",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "167",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#target_reale",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "target_reale"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_implementato",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "è_implementato",
+      "undefined" : "è_implementato"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Un algoritmo è implementato in una una libreria che a sua volta è implementata in un certo linguaggio di programmazione"
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#risolve",
+    "inverse" : "14",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "risolve",
+      "undefined" : "risolve"
+    },
+    "superproperty" : [ "15" ],
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Un algoritmo di ML risolve un certo task"
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#combinazione_lineare",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "combinazione_lineare"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_input",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "prende_in_input",
+      "undefined" : "prende_in_input"
+    },
+    "domain" : "21",
+    "subproperty" : [ "23", "24", "25" ],
+    "comment" : {
+      "undefined" : "Un certo trasformatore feature prende in input un certo tipo di feature"
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "range" : "2",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "2",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "7",
+    "subproperty" : [ "11" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "21",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "21",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "2",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "21",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "37",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "37",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#viene_estratta",
+    "inverse" : "52",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "viene_estratta",
+      "undefined" : "viene_estratta"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "relazione che premette di poter dire che da un certo dataset viene estratta una certa feature"
+    },
+    "attributes" : [ "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_estratta",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "è_estratta",
+      "undefined" : "è_estratta"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Una certa feature è estratta da un certo dataset"
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#addestrato_su",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "addestrato_su",
+      "undefined" : "addestrato_su"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Se un certo algoritmo utilizza una certa feature e questa viene estratta da un certo dataset allora questo l'agoritmo è addestrato su quel dataset."
+    },
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "range" : "12",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "34",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "34",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#etichettato",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "etichettato"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#letterali",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "letterali"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#massimizzazione",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "massimizzazione"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#numero_clusters",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "numero_clusters"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_utilizzato_per",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "è_utilizzato_per",
+      "undefined" : "è_utilizzato_per"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Un certo dataset è utilizzato per risolvere un certo task"
+    },
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#neuroni",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "neuroni"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#esempi_pesati",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "91",
+    "label" : {
+      "IRI-based" : "esempi_pesati"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#restituzione_di_probabilità",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "restituzione_di_probabilità"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "range" : "12",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "12",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "range" : "12",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "12",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  }, {
+    "range" : "58",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "range" : "58",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#ha_weak_learner",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "ha_weak_learner"
+    },
+    "superproperty" : [ "103" ],
+    "domain" : "19",
+    "attributes" : [ "object" ],
+    "id" : "102"
+  }, {
+    "range" : "12",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "range" : "12",
+    "domain" : "106",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "range" : "85",
+    "domain" : "98",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "107"
+  }, {
+    "range" : "85",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_inputB",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "prende_in_inputB"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_inputC",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "prende_in_inputC"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_applicato_su",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "è_applicato_su",
+      "undefined" : "è_applicato_su"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Un certo tipo di apprendimento viene fatto su un certo dataset"
+    },
+    "attributes" : [ "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart",
+    "inverse" : "112",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPart",
+      "en" : "has part"
+    },
+    "domain" : "7",
+    "subproperty" : [ "103" ],
+    "comment" : {
+      "undefined" : "A transitive relation expressing parthood between any entities, e.g. 'the human body has a brain as part'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'."
+    },
+    "attributes" : [ "external", "transitive", "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#prende_in_inputQ",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "prende_in_inputQ"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "34",
+    "comment" : {
+      "undefined" : "Questa è la relazione che permette di poter definire l'algoritmo di trasformazione feature che trasforma prende in input solo features quantitative e le trasforma solo in features quantitative."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#radice",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "radice"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype" ],
+    "id" : "113"
+  }, {
+    "range" : "19",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "116"
+  }, {
+    "range" : "22",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "range" : "22",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "22",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "range" : "2",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "2",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "53",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "2",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_CQ",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "trasforma_in_CQ"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "126"
+  }, {
+    "range" : "41",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "41",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "133"
+  }, {
+    "range" : "10",
+    "domain" : "135",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "13",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "32",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "range" : "41",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "range" : "13",
+    "domain" : "85",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_risolto_da",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "è_risolto_da",
+      "undefined" : "è_risolto_da"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Un certo task è risolta un algoritmo di ML"
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_BQ",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "trasforma_in_BQ"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "32",
+    "attributes" : [ "object" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_un",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "è_un",
+      "undefined" : "è_un"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#utilizza",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "utilizza",
+      "undefined" : "utilizza"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Un algoritmo di ML utilizza un certo tipo di feature"
+    },
+    "attributes" : [ "object" ],
+    "id" : "142"
+  }, {
+    "range" : "40",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "40",
+    "domain" : "109",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "72",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "range" : "38",
+    "domain" : "128",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "34",
+    "domain" : "114",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_CC",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "trasforma_in_CC"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "148"
+  }, {
+    "range" : "40",
+    "domain" : "130",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_CB",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "trasforma_in_CB"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "150"
+  }, {
+    "range" : "38",
+    "domain" : "129",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "64",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "range" : "83",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "is part of"
+    },
+    "domain" : "7",
+    "subproperty" : [ "155" ],
+    "comment" : {
+      "undefined" : "A transitive relation expressing parthood between any entities, e.g. 'brain is a part of the human body'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'."
+    },
+    "attributes" : [ "external", "transitive", "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent",
+    "inverse" : "155",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+    "range" : "72",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasComponent",
+      "en" : "has component"
+    },
+    "superproperty" : [ "111" ],
+    "domain" : "72",
+    "subproperty" : [ "102" ],
+    "comment" : {
+      "undefined" : "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern."
+    },
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+    "range" : "72",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isComponentOf",
+      "en" : "is component of"
+    },
+    "superproperty" : [ "112" ],
+    "domain" : "72",
+    "comment" : {
+      "undefined" : "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern."
+    },
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "trasforma_in",
+      "undefined" : "trasforma_in"
+    },
+    "domain" : "21",
+    "subproperty" : [ "126", "160", "161", "148", "162", "140", "150" ],
+    "comment" : {
+      "undefined" : "un trasformatore feature trasforma una feature di un certo tipo in un altro tipo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_QC",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "trasforma_in_QC"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "34",
+    "attributes" : [ "object" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_QB",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "trasforma_in_QB"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "34",
+    "attributes" : [ "object" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#numero_classi",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "numero_classi"
+    },
+    "domain" : "38",
+    "attributes" : [ "datatype" ],
+    "id" : "164"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#numero_di_livelli",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "numero_di_livelli"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "165"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#è_basato_su",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "è_basato_su",
+      "undefined" : "è_basato_su"
+    },
+    "domain" : "94",
+    "attributes" : [ "object" ],
+    "id" : "166"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#trasforma_in_QQ",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "trasforma_in_QQ"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "34",
+    "attributes" : [ "object" ],
+    "id" : "162"
+  }, {
+    "iri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34#distanze",
+    "baseIri" : "http://www.semanticweb.org/miky9/ontologies/2022/3/untitled-ontology-34",
+    "range" : "156",
+    "label" : {
+      "IRI-based" : "distanze"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "167"
+  } ]
+}
